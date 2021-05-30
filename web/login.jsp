@@ -76,10 +76,10 @@
 <div class="body">
     <div class="window">
         <div class="windowhead">欢迎登录旅游账户</div>
-        <form action="#" method="get">
-            <input type="text" name="username" id="input1" value="name" style="width:200px;height:40px;" placeholder="请输入账号" />
+        <form action="login" method="get">
+            <input type="text" name="name" id="input1" value="" style="width:200px;height:40px;" placeholder="请输入账号" />
             <br>
-            <input type="password" name="password" id="input2" value="pwd" style="width:200px;height:40px;" placeholder="请输入密码" />
+            <input type="password" name="pwd" id="input2" value="" style="width:200px;height:40px;" placeholder="请输入密码" />
             <br>
             <input type="submit" name="denglu" id="input3" value="登录" style="width:120px;height:40px;"/>
             <br>
@@ -87,7 +87,7 @@
                 <input type="checkbox" name="" id="" value="" />记住密码
             </div>
             <div id="d4">
-                <span>没有账户？</span><a href="#" style="color: red; text-decoration: none;" >注册账户</a>
+                <span>没有账户？</span><a href="register.jsp" style="color: red; text-decoration: none;" >注册账户</a>
             </div>
         </form>
     </div>

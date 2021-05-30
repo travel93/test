@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>登录页面</title>
+    <title>页面界面</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +53,7 @@
     <div class="row">
       <!-- 登录状态  -->
       <div class="login" style="float: right;margin-top: -20px;">
-        <span id="span_username"></span>
+        <span id="span_username">欢迎 <%=request.getParameter("name")%> </span>
         <a href="#" class="collection">我的收藏</a>
         <a href="#">退出</a>
       </div>
