@@ -48,7 +48,9 @@
 <div class="head"></div>
 <!-- 身体 -->
 <div class="body" align="center">
-    <form method="get" id="registForm" style="position: absolute;top:50px">
+
+    <form action="user?code=regist" method="post" id="registForm" style="position: absolute;top:50px">
+        <h1 style="color:red">${requestScope.msg}</h1>
         <table border="0px" style="width: 650px;height: 600px;" align="center" cellpadding="0px" cellspacing="0px" bgcolor="white">
             <tr>
                 <td colspan="2">
@@ -141,7 +143,7 @@
                     出生日期
                 </td>
                 <td>
-                    <input type="text" style="border-radius: 6px;height: 30px;" name="birthday"  size="35px" id="birthday" placeholder="&nbsp;&nbsp;年/月/日"/>
+                    <input type="date" style="border-radius: 6px;height: 30px;" name="birthday"  size="35px" id="birthday" placeholder="&nbsp;&nbsp;年/月/日"/>
 
                 </td>
             </tr>

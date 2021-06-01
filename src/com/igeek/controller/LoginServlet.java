@@ -1,4 +1,4 @@
-package servlet;
+package com.igeek.controller;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,9 +20,7 @@ public class LoginServlet extends HttpServlet {
 
         String name = request.getParameter("name");
         String pwd = request.getParameter("pwd");
-        if("张三".equals(name) && "123".equals(pwd)){
-            request.getRequestDispatcher("index.jsp").forward(request,response);
-        }
+        request.getRequestDispatcher("index.jsp").forward(request,response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

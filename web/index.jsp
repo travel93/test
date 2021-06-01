@@ -6,6 +6,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+  Object user = session.getAttribute("user");
+  if(user == null){
+    request.setAttribute("msg","当前资源需登录后才能访问");
+    request.getRequestDispatcher("login.jsp").forward(request,response);
+  }
+%>
 <html>
   <head>
     <title>页面界面</title>
@@ -14,18 +21,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="resource/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      .shortcut{
-        width: 200px;
-        background-color: lightblue;
-      }
-      .login_out{
-        float: left;
-      }
-      .login{
-        float:left;
-        padding-left: 30px;
-      }
-
       #menu li{
         width: 90px;
         /* border: 1px solid black; */
@@ -40,22 +35,12 @@
   </head>
   <body>
   <!-- 头部条 -->
-  <div class="container">
+  <div class="container" style="float:right">
     <div class="row">
-      <div class="shortcut">
-        <!-- 未登录状态  -->
-        <div class="login_out">
-          <a href="#">登录</a>
-          <a href="#">注册</a>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- 登录状态  -->
-      <div class="login" style="float: right;margin-top: -20px;">
-        <span id="span_username">欢迎 <%=request.getParameter("name")%> </span>
+      <div class="login">
+        <span id="span_username">欢迎 ${sessionScope.user.name} </span>
         <a href="#" class="collection">我的收藏</a>
-        <a href="#">退出</a>
+        <a href="user?code=logout">退出</a>
       </div>
     </div>
   </div>
