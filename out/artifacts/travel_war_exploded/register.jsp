@@ -30,7 +30,7 @@
         }
         label.error{
             background:url("resource/images/unchecked.gif") no-repeat 10px 3px;
-            padding-left: 10px;
+            padding-left: 20px;
             font-family:georgia;
             font-size: 15px;
             font-style: normal;
